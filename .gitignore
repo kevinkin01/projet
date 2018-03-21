@@ -1,0 +1,8 @@
+# ignore phpstorm
+/.idea
+# ignore netbeans
+/nbproject
+
+
+
+
