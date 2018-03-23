@@ -1,18 +1,25 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <title>Notre site - Accueil</title>
-    <link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css"/>
-    <script src="public/jquery.min.js"></script>
-    <script src="public/bootstrap/js/bootstrap.min.js"></script>
+<?php include_once "header.html.php"?>
+
+<title>Notre site - Accueil</title>
+
 </head>
 <body>
+
+<?php include "menu.html.php"?>
+
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
 <h1>Notre site - Accueil</h1>
-<ul>
-    <li><a href="./">Accueil</a></li>
-    <li><a href="">ici on aura nos rubriques</a></li>
-    <li><a href="?login">Connexion</a></li>
-</ul>
+        </div>
+    </div>
+    <div class="container">
+    <h3>titre</h3>
+       <p>notre contenu</p>
+        <hr>
+    </div>
+
+</main>
+
 </body>
 </html>
