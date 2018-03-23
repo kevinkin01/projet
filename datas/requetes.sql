@@ -42,3 +42,33 @@ SELECT user.*, permission.level
     
 # sélection des categ pour le menu (idcateg et name)
 SELECT idcateg, name FROM categ;
+
+# Sélection de toutes les "news" (idnews, title, content, publication) LORSQUE "news.visible"=1
+SELECT n.idnews, n.title, n.content, n.publication 
+	FROM news n
+    WHERE n.visible=1;
+    
+# Sélection de toutes les "news" (idnews, title, 220 caractères de content, publication) LORSQUE "news.visible"=1
+SELECT n.idnews, n.title, SUBSTR(n.content, 1, 220) AS content, n.publication 
+	FROM news n
+    WHERE n.visible=1;
+    
+# Sélection de toutes les "news" (idnews, title, 220 caractères de content, publication), lien non obligatoire avec "categ" (idcateg,name)  LORSQUE "news.visible"=1
+SELECT n.idnews, n.title, SUBSTR(n.content, 1, 220) AS content, n.publication, c.idcateg, c.name 
+	FROM news n
+		LEFT JOIN news_has_categ h
+			ON h.news_idnews = n.idnews
+		LEFT JOIN categ c
+			ON h.categ_idcateg = c.idcateg
+    WHERE n.visible=1;
+    
+# Sélection de toutes les "news" (idnews, title, 220 caractères de content, publication), lien non obligatoire avec "categ" (idcateg,name => SONT résultats concaténés, idcateg avec une ",", name avec "_€.€_")  LORSQUE "news.visible"=1 le tout groupé par "n.idnews"
+SELECT n.idnews, n.title, SUBSTR(n.content, 1, 220) AS content, n.publication, GROUP_CONCAT(c.idcateg) AS idcateg, GROUP_CONCAT(c.name SEPARATOR '_€.€_') AS name 
+	FROM news n
+		LEFT JOIN news_has_categ h
+			ON h.news_idnews = n.idnews
+		LEFT JOIN categ c
+			ON h.categ_idcateg = c.idcateg
+    WHERE n.visible=1
+    GROUP BY n.idnews;    
+    

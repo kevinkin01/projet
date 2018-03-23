@@ -9,11 +9,15 @@
             <li class="nav-item active">
                 <a class="nav-link" href="./">Accueil <span class="sr-only">(current)</span></a>
             </li>
-
+            <?php
+        foreach ($menu as $m) {
+            ?>
             <li class="nav-item">
-                <a class="nav-link" href="#">ici on aura nos rubriques</a>
+            <a class="nav-link" href="?categ=<?=$m['idcateg']?>"><?=$m['name']?></a>
             </li>
-
+            <?php
+        }
+            ?>
         </ul>
         <a class="btn btn-outline-secondary" href="?login">Connexion</a>
     </div>

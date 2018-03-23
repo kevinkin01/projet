@@ -4,7 +4,7 @@
  */
 
 function listCateg($db){
-    $sql = "SELECT idcateg, name FROM categ;";
+    $sql = "SELECT idcateg, name FROM categ ORDER BY idcateg ASC;";
     $recup = mysqli_query($db,$sql);
     // si on a au moins une catégorie
     if(mysqli_num_rows($recup)){
