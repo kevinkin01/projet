@@ -22,3 +22,20 @@ SELECT n.title, n.content, u.name, p.name AS pname, p.level
     INNER JOIN permission p 
 		on u.permission_idpermission = p.idpermission
     ;
+    
+# sélection de tous les champs de "user", et du "name" renommé "pname" qui ont le level "3" depuis "permission"
+SELECT u.*, p.name AS pname 
+	FROM user u 
+		INNER JOIN permission p 
+		ON u.permission_idpermission = p.idpermission
+    WHERE p.level=3;
+
+# Sélection de tous les champs de "user" et le "level" de "permission" lorsque "user.login" vaut "edit" et "user.pwd" vaut "edit"
+SET @login_user = "edit";
+SET @pwd_user = "edit";
+SELECT user.*, permission.level
+	FROM user 
+    INNER JOIN permission
+		ON permission.idpermission = user.permission_idpermission
+    WHERE user.login=@login_user AND user.pwd=@pwd_user;
+    ;

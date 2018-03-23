@@ -3,5 +3,6 @@
  * Contrôleur public
  */
 
-// chemin vers le fichier actuel
-echo __DIR__;
+// si on est sur l'accueil
+
+require_once "v/accueil.html.php";
