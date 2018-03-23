@@ -31,11 +31,14 @@ SELECT u.*, p.name AS pname
     WHERE p.level=3;
 
 # Sélection de tous les champs de "user" et le "level" de "permission" lorsque "user.login" vaut "edit" et "user.pwd" vaut "edit"
-SET @login_user = "edit";
-SET @pwd_user = "edit";
+SET @login_user = "user2";
+SET @pwd_user = "user2";
 SELECT user.*, permission.level
 	FROM user 
     INNER JOIN permission
 		ON permission.idpermission = user.permission_idpermission
     WHERE user.login=@login_user AND user.pwd=@pwd_user;
     ;
+    
+# sélection des categ pour le menu (idcateg et name)
+SELECT idcateg, name FROM categ;
