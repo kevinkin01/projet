@@ -1,0 +1,36 @@
+h1 {
+    text-align: center;
+}
+#global {
+    width:800px;
+    margin: 0 auto;
+}
+
+#global h1 {
+    text-align:center;
+}
+
+#vignettes ul {
+    list-style:none;
+}
+
+#vignettes ul li {
+    display: inline-block;
+}
+
+#vignettes ul li img {
+    border: 2px solid black;
+    padding: 3px;
+    margin-right:10px;
+}
+
+#grandephoto img {
+    border: 2px solid red;
+    padding: 5px;
+    margin-left: 145px;
+}
+
+#grandephoto p {
+    text-align: center;
+    font-size: 24px;
+}

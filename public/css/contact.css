@@ -1,0 +1,71 @@
+h1 {
+    text-align: center;
+}
+input[type=text]{
+    border: dotted 1px #7A7a7a;
+
+    width: 20%;
+    position:absolute;
+    left: 23%;
+    top:40% ;
+    margin-left: -11.5px; /* Cette valeur doit être la moitié négative de la valeur du width */
+    margin-top: -20px;
+}
+input[type=email]{
+    border: dotted 1px #7A7a7a;
+
+    width: 20%;
+    position:absolute;
+    left: 63.5%;
+    top: 40%;
+    margin-left: -31.5px; /* Cette valeur doit être la moitié négative de la valeur du width */
+    margin-top: -20px;
+}
+textarea {
+    border: dotted 1px #7A7a7a;
+    width: 60%;
+    height: 100px;
+    position:absolute;
+    left: 23%;
+    top: 50%;
+    margin-left: -15px;
+    margin-top: -25px;
+
+}
+
+input[type = submit]{
+    background:#DDDDDD;
+    position:absolute;
+    left: 50%;
+    top: 65%;
+    margin-left: -100px;
+    margin-top: -42.5px;
+}
+input[type = submit] :hover {
+    background: #ffffff;
+
+}
+label.message {
+    position:absolute;
+    left: 15%;
+    top: 50%;
+    margin-left: -7.5px;
+    margin-top: -25px;
+}
+label.email {
+    position:absolute;
+    left: 60%;
+    top: 40%;
+    margin-left: -30px;
+    margin-top: -20px;
+}
+label.nom{
+    position:absolute;
+    left: 19%;
+    top: 40%;
+    margin-left: -9.5px;
+    margin-top: -20px;
+}
+.error-message{
+    color: #ff0000;
+}

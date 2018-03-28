@@ -1,24 +1,18 @@
 <?php include_once "header.html.php"?>
 
-<title>Notre site - Accueil</title>
 
+<html>
 </head>
 <body>
 
 <?php include "menu.html.php"?>
 
-<main role="main">
-    <div class="jumbotron">
-        <div class="container">
-<h1>Notre site - Accueil</h1>
-        </div>
-    </div>
-    <div class="container">
+
         <?php
-    // si pas d'articles (false)
+
     if(!$articles){
         ?>
-    <h3 class="text-muted">Pas encore d'articles</h3>
+
         <?php
     }else{
         foreach($articles as $item) {
@@ -43,8 +37,7 @@
         }
     }
     ?>
-    </div>
-</main>
+
 
 </body>
 </html>
