@@ -34,12 +34,13 @@ if(empty($_GET)){
     require_once "c/GalerieController.php";
 
 }elseif(isset($_GET['categ'] )&& $_GET['categ']==1){
-require_once "c/LiensController.php";
+    require_once "c/LiensController.php";
 
 }elseif (isset($_GET['categ'] )&& $_GET['categ']==2) {
     require_once "c/CVController.php";
 
-}
-else{
+}else{
     require_once "c/PublicController.php";
 }
+
+

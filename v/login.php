@@ -1,4 +1,5 @@
 <?php
+include "header.html.php";
 session_start();
 
 // variables sous forme de tableaux pour se connecter
@@ -41,24 +42,41 @@ if(isset($_POST['lelogin'],$_POST['lepwd'])){
 }
 
 ?>
-<!DOCTYPE html>
-<html lang="fr">
+
+
+<!doctype html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Connexion</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../../../dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="signin.css" rel="stylesheet">
 </head>
-<body>
-<h1>Connexion</h1>
-<?php
-include "menu.html.php";
-?>
-<form action="" name="connect" method="post">
-    <?php
-    if(isset($affiche)) echo "<h3 style='color: #ff0000;'>$affiche</h3>";
-    ?>
-    <input type="text" name="lelogin" placeholder="votre login" required>
-    <input type="password" name="lepwd" placeholder="votre mdp" required>
-    <input type="submit" value="connexion">
+
+<body class="text-center">
+<form class="form-signin">
+    <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>
+    <label for="user" class="sr-only">User</label>
+    <input type="email" id="inputuser" class="form-control" placeholder="User" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <div class="checkbox mb-3">
+        <label>
+            <input type="checkbox" value="remember-me"> Remember me
+        </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+
 </form>
 </body>
 </html>

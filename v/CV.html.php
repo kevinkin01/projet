@@ -1,4 +1,6 @@
-<?php include_once "header.html.php"?>
+<?php include_once "header.html.php";
+
+?>
 <!DOCTYPE html>
 <html lang="FR">
 <head>
@@ -14,9 +16,10 @@
     </main>
 </head>
 <body>
-<p>jfdfkjfklf</p>
-</body>
-</html>
 <?php
 include "menu.html.php"
 ?>
+<h2>à venir</h2>
+
+</body>
+</html>

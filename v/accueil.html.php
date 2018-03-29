@@ -1,10 +1,10 @@
-<?php include_once "header.html.php"?>
 
 
-<html>
-</head>
+
+
+
 <body>
-
+<?php include_once "header.html.php"?>
 <?php include "menu.html.php"?>
 
 

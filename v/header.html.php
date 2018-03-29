@@ -8,3 +8,4 @@
 <link rel="stylesheet" href="public/bootstrap/css/jumbotron.css"/>
 <script src="public/jquery.min.js"></script>
 <script src="public/bootstrap/js/bootstrap.min.js"></script>
+</head>

@@ -8,18 +8,19 @@
     <script type="text/javascript" language="JavaScript" src="public/jquery.min.js"></script>
     <title>Contact</title>
     <script type="text/javascript">
-        $(function () {
+
             $("#envoyer").click(function () {
                 valid=true;
-                if  ($("#nom").val()==""){
+                if ($("#nom").val()==""){
                     $("#nom").css("border-color","#ff0000");
                     $("#nom").next(".error-message").text("champ pas valide");
                     return false;
                     valid=false;
                 }else {
                     $("#nom").css("border-color","#00ff00");
-                    $("#nom").next(".error-message").text("champ pas valide");
+
                 }
+
                 if  ($("#email").val()==""){
                     $("#email").css("border-color","#ff0000");
                     $("#email").next(".error-message").text("champ pas valide");
@@ -27,33 +28,29 @@
                     valid=false;
                 }else {
                     if (!$("#email").val().match("/^[a-z0-9\-_.]+@[a-z0-9\-_.]+\.[a-z]{2,3}$/i")){
-                        $("#email").css("border-color","#00ff00");
-                        $("#email").next(".error-message").text("veuillez entrer un email valide");
-                    }else{
                         $("#email").css("border-color","#ff0000");
-                        $("#email").next(".error-message").text("");
+                        $("#email").next(".error-message").text("veuillez entrer un email valide");
+                        return false;
                         valid = false;
-                    }
+
+                    }else{
+                        $("#email").css("border-color","#00ff00");
+                    }}
+
                     if  ($("#message").val()==""){
                         $("#message").css("border-color","#ff0000");
                         $("#message").next(".error-message").text("veuillez entrer un message");
                         valid=false;
+                        return false;
                     }else{
                         $("#message").css("border-color","#00ff00");
-                        $("#message").next(".error-message").text("");
+
                     }
-                })
+                });
+
     </script>
-    <?php
-    include "menu.html.php"
-    ?>
-    <main role="main">
-        <div class="jumbotron">
-            <div class="container">
-                <h1>Contact</h1>
-            </div>
-        </div>
-    </main>
+
+
 </head>
 <?php
 if (!empty($_POST)){
@@ -63,9 +60,9 @@ if (!empty($_POST)){
         $valid=false;
         $erreurnom="vous n'avez pas rempli votre nom";
     }
-    if (preg_match("/^[a-z0-9\-_.]+@[a-z0-9\-_.]+\.[a-z]{2,3}$/i",$email)) {
+    if (!preg_match("/^[a-z0-9\-_.]+@[a-z0-9\-_.]+\.[a-z]{2,3}$/i",$email)) {
         $valid=false;
-        $erreuremail="votre email n'est pas valide";
+        $erreuremail="votre email n'est pas valide ";
     }
 
     if (empty($email)){
@@ -86,7 +83,7 @@ if (!empty($_POST)){
         $message = stripcslashes($message);
         $nom = stripcslashes($nom);
         if(mail($to,$sujet,$message,$header)){
-            $erreur = "votre message nous ai bien parvenu";
+            $correct = "votre message nous est bien parvenu";
             unset($nom);
             unset($email);
             unset($message);
@@ -100,11 +97,23 @@ if (!empty($_POST)){
 ?>
 <body>
 <?php
+include "menu.html.php"
+?>
+<main role="main">
+    <div class="jumbotron">
+        <div class="container">
+            <h1>Contact</h1>
+        </div>
+    </div>
+</main>
+<?php
 if (isset($erreur)){
-    echo "<p>$eurreur</p>";
+    echo "<p>$erreur</p>";
+}if (isset($correct)){
+    echo "<p>$correct</p>";
 }
 ?>
-<form method="post" action="v/contact.html.php">
+<form method="post" action="">
     <label for="nom" class="nom">Nom :</label>
     <input type="text" name="nom" id="nom" value="<?php if (isset($nom)){echo $nom;} ?>"/>
     <span class="error-message"><?php if (isset($erreurnom)){echo $erreurnom;} ?></span>
