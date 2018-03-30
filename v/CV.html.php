@@ -19,7 +19,7 @@
 <?php
 include "menu.html.php"
 ?>
-<h2>à venir</h2>
+<h2>bientôt disponible</h2>
 
 </body>
 </html>

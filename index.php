@@ -2,6 +2,7 @@
 /**
  * Contrôleur frontal
  */
+include "m/categModel.php";
 
 // lancement de session
 session_start();
@@ -13,7 +14,7 @@ require_once "config.php";
 require_once "m/ConnectDBModel.php";
 
 
-// si nous sommes connectés
+/* si nous sommes connectés
 if(isset($_SESSION['myKey'])){
     require_once "c/AdminController.php";
 
@@ -21,7 +22,7 @@ if(isset($_SESSION['myKey'])){
 }else{
     require_once "c/PublicController.php";
 
-}
+}*/
 
 if(empty($_GET)){
     require_once "c/PublicController.php";

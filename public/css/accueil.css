@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+}
+.img {
+    position:absolute;
+    left: 23%;
+    top: 40%;
+    margin-left: -15px;
+    margin-top: -20px;
+
+}

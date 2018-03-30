@@ -63,6 +63,9 @@ if(isset($_POST['lelogin'],$_POST['lepwd'])){
 </head>
 
 <body class="text-center">
+<?php
+include "menu.html.php";
+?>
 <form class="form-signin">
     <img class="mb-4" src="https://getbootstrap.com/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72">
     <h1 class="h3 mb-3 font-weight-normal">Connectez-vous</h1>

@@ -21,3 +21,11 @@ p  {
 a {
     text-align: center;
 }
+
+.lien {
+    position:absolute;
+    left: 56%;
+    top: 47.8%;
+    margin-left: -28px;
+    margin-top: -23.5px;
+}

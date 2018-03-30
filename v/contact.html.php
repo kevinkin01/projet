@@ -97,7 +97,8 @@ if (!empty($_POST)){
 ?>
 <body>
 <?php
-include "menu.html.php"
+include "header.html.php";
+include "menu.html.php";
 ?>
 <main role="main">
     <div class="jumbotron">
