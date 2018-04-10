@@ -3,7 +3,6 @@
 # ignore netbeans
 /nbproject
 # ignore config
-config.php
 
 
 

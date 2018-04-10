@@ -41,9 +41,7 @@ include "menu.html.php"
     <section id="vignettes">
         <ul>
             <li><img src="datas/images/pendu.png" alt="Pendu" width="128px" height="220px" onclick="afficheGrandePhoto(this);" /></li>
-            <li><img src="datas/images/admin.png" alt="Admin" width="121px" height="68px" onclick="afficheGrandePhoto(this);"/></li>
-            <li><img src="datas/images/geo.png" alt="Geo" width="128px" height="72px" onclick="afficheGrandePhoto(this);" /></li>
-           >
+
         </ul>
     </section>
     <section id="grandephoto">

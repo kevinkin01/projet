@@ -4,6 +4,7 @@ h1  {
 
 h2 {
     text-align: center;
+    font-size:55px ;
 }
 
 h3 {
@@ -13,19 +14,18 @@ h3 {
 h4 {
     text-align: center;
 }
+p {
 
-p  {
-    text-align: center;
-}
+    width:auto ;
+    height:auto;
 
-a {
-    text-align: center;
-}
+    text-align:center; /* centrage horizontal */ }
 
-.lien {
-    position:absolute;
-    left: 56%;
-    top: 47.8%;
-    margin-left: -28px;
-    margin-top: -23.5px;
-}
+span {
+    width:auto; /* largeur de la zone de texte */
+    padding:auto; /* aération interne de la zone de texte */
+
+
+    display: inline-block;
+    line-height:1.2; /* on rétablit le line-height */
+    text-align:left; /* ... et l'alignement du texte */ }
